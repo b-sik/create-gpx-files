@@ -44,7 +44,7 @@ def get_server_redirected_urls():
         writer = csv.writer(server_redirected_file)
         
         headers = next(reader)  # skip header
-        writer.writerow(header)
+        writer.writerow(headers)
 
         for row in reader:
             response = make_request(row[1])
